@@ -33,13 +33,11 @@ public class NumbersActivity extends AppCompatActivity {
         // Creating a LinearLayout object which is referencing to the LinearLayout XML with id 'root_view'
         LinearLayout rootView = (LinearLayout) findViewById(R.id.root_view);
 
-        int index = 0;
-        while(index < 10) {
+        for(int index = 0; index < 10; index++) {
             // Creating a TextView dynamically on Java and adding it as a child View to rootView
             TextView wordView = new TextView(this);
             wordView.setText(words.get(index));
             rootView.addView(wordView);
-            index++;
         }
     }
 }
