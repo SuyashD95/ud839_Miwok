@@ -61,14 +61,14 @@ public class WordAdapter extends ArrayAdapter<Word> {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        // Get the {@link Word} object located at this position in the list
+        Word currentWord = getItem(position);
+
         View listItemView = convertView;
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
-
-        // Get the {@link Word} object located at this position in the list
-        Word currentWord = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the ID miwok_text_view
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
