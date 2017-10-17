@@ -19,21 +19,21 @@ public class ColorsActivity extends AppCompatActivity {
 
         // Create an ArrayList of type Word called words
         ArrayList<Word> words = new ArrayList<>();
-        words.add(new Word("red", "weṭeṭṭi"));
-        words.add(new Word("dusty yellow", "ṭopiisә"));
-        words.add(new Word("mustard yellow", "chiwiiṭә"));
-        words.add(new Word("green", "chokokki"));
-        words.add(new Word("brown", "ṭakaakki"));
-        words.add(new Word("gray", "ṭopoppi"));
-        words.add(new Word("black", "kululli"));
-        words.add(new Word("white", "kelelli"));
+        words.add(new Word("red", "weṭeṭṭi", R.drawable.color_red));
+        words.add(new Word("dusty yellow", "ṭopiisә", R.drawable.color_dusty_yellow));
+        words.add(new Word("mustard yellow", "chiwiiṭә", R.drawable.color_mustard_yellow));
+        words.add(new Word("green", "chokokki", R.drawable.color_green));
+        words.add(new Word("brown", "ṭakaakki", R.drawable.color_brown));
+        words.add(new Word("gray", "ṭopoppi", R.drawable.color_gray));
+        words.add(new Word("black", "kululli", R.drawable.color_black));
+        words.add(new Word("white", "kelelli", R.drawable.color_white));
 
         // Create an {@link WordAdapter}, whose data source is a list of Words. The
         // adapter knows how to create layouts for each item in the list, using the
         // list_item.xml layout file found in the package com.example.android.miwok
         // This list item layout contains 2 {@link TextView}, which the adapter will set to
         // display a word in its miwok as well as default translation.
-        ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, words);
+        ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, words, R.color.category_colors);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

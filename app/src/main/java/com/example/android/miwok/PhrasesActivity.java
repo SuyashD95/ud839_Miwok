@@ -35,7 +35,7 @@ public class PhrasesActivity extends AppCompatActivity {
         // list_item.xml layout file found in the package com.example.android.miwok
         // This list item layout contains 2 {@link TextView}, which the adapter will set to
         // display a word in its miwok as well as default translation.
-        ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, words);
+        ArrayAdapter<Word> itemsAdapter = new WordAdapter(this, words, R.color.category_phrases);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
