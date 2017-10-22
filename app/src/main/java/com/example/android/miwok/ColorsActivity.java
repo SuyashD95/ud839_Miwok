@@ -93,6 +93,18 @@ public class ColorsActivity extends AppCompatActivity {
     }
 
     /**
+     * This state is triggered when the user can no longer see the activity and hence, cannot
+     * interact with the activity's UI.
+     */
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // Clean up the resources associated with the {@link MediaPlayer} when we switch between
+        // different activities or apps. Hence, the audio stops playing instantly.
+        releaseMediaPlayer();
+    }
+
+    /**
      * This listener gets triggered when the {@link MediaPlayer} has completed
      * playing the audio file.
      */
