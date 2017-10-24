@@ -7,16 +7,16 @@ import android.support.v4.app.FragmentPagerAdapter;
 /**
  * Provides the appropriate {@link Fragment} for a view pager.
  */
-public class MiwokFragmentPageAdapter extends FragmentPagerAdapter {
+public class CategoryAdapter extends FragmentPagerAdapter {
 
-    public MiwokFragmentPageAdapter(FragmentManager fragmentManager) {
+    public CategoryAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
     }
 
     /**
      * Return the Fragment associated with a specified position.
      *
-     * @param position
+     * @param position Index of a associated Fragment in the PagerAdapter
      */
     @Override
     public Fragment getItem(int position) {
