@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(categoryAdapter);
 
         // Find the tab layout that will allow the user to see the different categories as tabs
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         // Set the view pager onto the tab layout
         tabLayout.setupWithViewPager(viewPager);
