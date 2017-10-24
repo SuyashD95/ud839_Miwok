@@ -16,6 +16,7 @@
 package com.example.android.miwok;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -39,5 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the adapter onto the view pager
         viewPager.setAdapter(categoryAdapter);
+
+        // Find the tab layout that will allow the user to see the different categories as tabs
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+
+        // Set the view pager onto the tab layout
+        tabLayout.setupWithViewPager(viewPager);
     }
 }
