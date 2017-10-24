@@ -5,18 +5,23 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 /**
- * Provides the appropriate {@link Fragment} for a view pager.
+ * {@link CategoryAdapter} is a {@link FragmentPagerAdapter} that can provide the layout for
+ * each list item based on a data source which is a list of {@link Word} objects.
  */
 public class CategoryAdapter extends FragmentPagerAdapter {
 
+    /**
+     * Create a new {@link CategoryAdapter} object.
+     *
+     * @param fragmentManager is the fragment manager that will keep each fragment's state in the adapter
+     *           across swipes.
+     */
     public CategoryAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
     }
 
     /**
-     * Return the Fragment associated with a specified position.
-     *
-     * @param position Index of a associated Fragment in the PagerAdapter
+     * Return the {@link Fragment} that should be displayed for the given page number.
      */
     @Override
     public Fragment getItem(int position) {
@@ -35,7 +40,7 @@ public class CategoryAdapter extends FragmentPagerAdapter {
     }
 
     /**
-     * Return the number of views available.
+     * Return the total number of pages.
      */
     @Override
     public int getCount() {
