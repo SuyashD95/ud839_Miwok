@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary_color"
-        app:tabTextColor="@android:color/white"
+        app:tabTextColor="@color/tab_unselected_text"
         app:tabSelectedTextColor="@android:color/white"
         app:tabIndicatorColor="@android:color/white"
         app:tabMaxWidth="0dp"
